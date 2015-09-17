@@ -1,0 +1,4 @@
+C:\Users\gero\Personal_Projects\C#\FileRenamer\bin\Release\FileRenamer.exe
+C:\Users\gero\Personal_Projects\C#\FileRenamer\bin\Release\FileRenamer.pdb
+C:\Users\gero\Personal_Projects\C#\FileRenamer\obj\x86\Release\FileRenamer.exe
+C:\Users\gero\Personal_Projects\C#\FileRenamer\obj\x86\Release\FileRenamer.pdb

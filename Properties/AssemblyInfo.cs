@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("FileRenamer")]
+[assembly: AssemblyTitle("File Renamer")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Siemens")]
-[assembly: AssemblyProduct("FileRenamer")]
-[assembly: AssemblyCopyright("Copyright © Siemens 2015")]
+[assembly: AssemblyCompany("Roy Gero")]
+[assembly: AssemblyProduct("File Renamer")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
