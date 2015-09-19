@@ -30,114 +30,116 @@ namespace File_Renamer
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip = new System.Windows.Forms.MenuStrip();
+            this.fileOption = new System.Windows.Forms.ToolStripMenuItem();
             this.restartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fileDirLabel = new System.Windows.Forms.Label();
             this.fileDirectory = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.fileExtLabel = new System.Windows.Forms.Label();
             this.fileExtension = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.filePrefixLabel = new System.Windows.Forms.Label();
             this.filePrefix = new System.Windows.Forms.TextBox();
             this.runUtility = new System.Windows.Forms.Button();
             this.resetButton = new System.Windows.Forms.Button();
             this.messageDelivery = new System.Windows.Forms.Label();
-            this.menuStrip1.SuspendLayout();
+            this.quitButton = new System.Windows.Forms.Button();
+            this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // menuStrip
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem,
-            this.aboutToolStripMenuItem1});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(284, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileOption,
+            this.aboutToolStripMenuItem});
+            this.menuStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip.Name = "menuStrip";
+            this.menuStrip.Size = new System.Drawing.Size(284, 24);
+            this.menuStrip.TabIndex = 0;
+            this.menuStrip.Text = "menuStrip1";
             // 
-            // aboutToolStripMenuItem
+            // fileOption
             // 
-            this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileOption.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.restartToolStripMenuItem,
             this.exitToolStripMenuItem});
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.aboutToolStripMenuItem.Text = "File";
+            this.fileOption.Name = "fileOption";
+            this.fileOption.Size = new System.Drawing.Size(37, 20);
+            this.fileOption.Text = "File";
             // 
             // restartToolStripMenuItem
             // 
             this.restartToolStripMenuItem.Name = "restartToolStripMenuItem";
-            this.restartToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.restartToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.restartToolStripMenuItem.Text = "Restart";
-            this.restartToolStripMenuItem.Click += new EventHandler(this.resetButton_Click);
+            this.restartToolStripMenuItem.Click += new System.EventHandler(this.resetButton_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new EventHandler(exitToolStripMenuItem_Click);
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.quit_Click);
             // 
-            // aboutToolStripMenuItem1
+            // aboutToolStripMenuItem
             // 
-            this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
-            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(52, 20);
-            this.aboutToolStripMenuItem1.Text = "About";
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.about_Click);
             // 
-            // label1
+            // fileDirLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 53);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Directory";
+            this.fileDirLabel.AutoSize = true;
+            this.fileDirLabel.Location = new System.Drawing.Point(21, 53);
+            this.fileDirLabel.Name = "fileDirLabel";
+            this.fileDirLabel.Size = new System.Drawing.Size(49, 13);
+            this.fileDirLabel.TabIndex = 1;
+            this.fileDirLabel.Text = "Directory";
             // 
             // fileDirectory
             // 
-            this.fileDirectory.Location = new System.Drawing.Point(108, 50);
+            this.fileDirectory.Location = new System.Drawing.Point(99, 50);
             this.fileDirectory.Name = "fileDirectory";
             this.fileDirectory.Size = new System.Drawing.Size(164, 20);
             this.fileDirectory.TabIndex = 2;
             // 
-            // label2
+            // fileExtLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 80);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "File Extension";
+            this.fileExtLabel.AutoSize = true;
+            this.fileExtLabel.Location = new System.Drawing.Point(21, 80);
+            this.fileExtLabel.Name = "fileExtLabel";
+            this.fileExtLabel.Size = new System.Drawing.Size(72, 13);
+            this.fileExtLabel.TabIndex = 3;
+            this.fileExtLabel.Text = "File Extension";
             // 
             // fileExtension
             // 
-            this.fileExtension.Location = new System.Drawing.Point(108, 76);
+            this.fileExtension.Location = new System.Drawing.Point(99, 76);
             this.fileExtension.Name = "fileExtension";
             this.fileExtension.Size = new System.Drawing.Size(164, 20);
             this.fileExtension.TabIndex = 4;
             // 
-            // label3
+            // filePrefixLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(30, 110);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "File Prefix";
+            this.filePrefixLabel.AutoSize = true;
+            this.filePrefixLabel.Location = new System.Drawing.Point(21, 110);
+            this.filePrefixLabel.Name = "filePrefixLabel";
+            this.filePrefixLabel.Size = new System.Drawing.Size(52, 13);
+            this.filePrefixLabel.TabIndex = 5;
+            this.filePrefixLabel.Text = "File Prefix";
             // 
             // filePrefix
             // 
-            this.filePrefix.Location = new System.Drawing.Point(108, 107);
+            this.filePrefix.Location = new System.Drawing.Point(99, 107);
             this.filePrefix.Name = "filePrefix";
             this.filePrefix.Size = new System.Drawing.Size(164, 20);
             this.filePrefix.TabIndex = 6;
             // 
             // runUtility
             // 
-            this.runUtility.Location = new System.Drawing.Point(108, 162);
+            this.runUtility.Location = new System.Drawing.Point(20, 192);
             this.runUtility.Name = "runUtility";
             this.runUtility.Size = new System.Drawing.Size(75, 23);
             this.runUtility.TabIndex = 7;
@@ -147,7 +149,7 @@ namespace File_Renamer
             // 
             // resetButton
             // 
-            this.resetButton.Location = new System.Drawing.Point(108, 192);
+            this.resetButton.Location = new System.Drawing.Point(105, 192);
             this.resetButton.Name = "resetButton";
             this.resetButton.Size = new System.Drawing.Size(75, 23);
             this.resetButton.TabIndex = 8;
@@ -164,26 +166,37 @@ namespace File_Renamer
             this.messageDelivery.TabIndex = 9;
             this.messageDelivery.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // quitButton
+            // 
+            this.quitButton.Location = new System.Drawing.Point(190, 192);
+            this.quitButton.Name = "quitButton";
+            this.quitButton.Size = new System.Drawing.Size(75, 23);
+            this.quitButton.TabIndex = 10;
+            this.quitButton.Text = "Quit";
+            this.quitButton.UseVisualStyleBackColor = true;
+            this.quitButton.Click += new EventHandler(this.quit_Click);
+            // 
             // mainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.quitButton);
             this.Controls.Add(this.messageDelivery);
             this.Controls.Add(this.resetButton);
             this.Controls.Add(this.runUtility);
             this.Controls.Add(this.filePrefix);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.filePrefixLabel);
             this.Controls.Add(this.fileExtension);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.fileExtLabel);
             this.Controls.Add(this.fileDirectory);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.fileDirLabel);
+            this.Controls.Add(this.menuStrip);
+            this.MainMenuStrip = this.menuStrip;
             this.Name = "mainPage";
             this.Text = "The Simple File Renamer";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.menuStrip.ResumeLayout(false);
+            this.menuStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,20 +204,21 @@ namespace File_Renamer
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip menuStrip;
+        private System.Windows.Forms.ToolStripMenuItem fileOption;
         private System.Windows.Forms.ToolStripMenuItem restartToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.Label fileDirLabel;
         private System.Windows.Forms.TextBox fileDirectory;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label fileExtLabel;
         private System.Windows.Forms.TextBox fileExtension;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label filePrefixLabel;
         private System.Windows.Forms.TextBox filePrefix;
         private System.Windows.Forms.Button runUtility;
         private System.Windows.Forms.Button resetButton;
         private System.Windows.Forms.Label messageDelivery;
+        private System.Windows.Forms.Button quitButton;
     }
 }
 

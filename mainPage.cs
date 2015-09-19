@@ -43,24 +43,22 @@ namespace File_Renamer
             string fP = filePrefix.Text;
             bool dirExists = false;
             bool extValid = false;
+            bool userOK = false;
 
             //Checking if directory exists
-            try
+            if ( !Directory.Exists(fD) || String.IsNullOrEmpty(fD) )
             {
-                if (!Directory.Exists(fD))
-                {
-                    throw new DirectoryNotFoundException();
-                }
-                else
+                verifyNoDirectory noDirProvided = new verifyNoDirectory();
+                noDirProvided.ShowDialog();
+                userOK = noDirProvided.oktoProceed;
+                messageDelivery.Text = "We entered this code Path";
+                if (userOK)
                 {
                     dirExists = true;
+                    fD = Directory.GetCurrentDirectory();
                 }
             }
-            catch (DirectoryNotFoundException errorHandling) //To catch the directory not existing.
-            {
-                messageDelivery.Text = "Directory does not exist, using current directory";
-                fD = Directory.GetCurrentDirectory();
-            }
+
 
             //Checking the file Extension
             try
@@ -84,12 +82,16 @@ namespace File_Renamer
             {
                 messageDelivery.Text = "No File Extension provided. Aborting.";
             }
-            
-            //Checking the third parameter
-            int filesProcessed = rename(fD, fE, fP);
+
+
             if (extValid && dirExists)
             {
+                int filesProcessed = rename(fD, fE, fP);
                 messageDelivery.Text = filesProcessed.ToString() + " files processed";
+            }
+            else if (!userOK)
+            {
+                messageDelivery.Text = "User Aborted!";
             }
         }
 
@@ -99,11 +101,18 @@ namespace File_Renamer
             fileExtension.Text = String.Empty;
             filePrefix.Text = String.Empty;
             messageDelivery.Text = String.Empty;
+            this.Size = new System.Drawing.Size(300, 300);
         }
 
-        private void exitToolStripMenuItem_Click(Object sender, EventArgs e)
+        private void quit_Click(Object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void about_Click(Object sender, EventArgs e)
+        {
+            aboutMenu about = new aboutMenu();
+            about.Show();
         }
     }
 }
