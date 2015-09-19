@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("File Renamer")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Roy Gero")]
+[assembly: AssemblyCompany("Microsoft")]
 [assembly: AssemblyProduct("File Renamer")]
-[assembly: AssemblyCopyright("")]
+[assembly: AssemblyCopyright("Copyright © Microsoft 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("cec2a8dd-d53f-4b27-b420-bbf7c1e31a9a")]
+[assembly: Guid("3f2fc8f9-3e4b-4ada-ab09-65577443c3a8")]
 
 // Version information for an assembly consists of the following four values:
 //
