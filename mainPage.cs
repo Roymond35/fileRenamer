@@ -20,15 +20,23 @@ namespace File_Renamer
         private static int rename(string fD, string fE, string fP)
         {
             fD += @"\";
-            int i = 0;
+            int i = 1;
             var filesMatched = Directory.EnumerateFiles(fD, "*" + fE);
             int preceedingZeros = filesMatched.Count<String>().ToString().Length;
             foreach (String file in filesMatched)
             {
                 string oldFileName = file.Substring(fD.Length);
-                string newFileName = fP + i.ToString("D" + preceedingZeros.ToString()) + fE;
-                File.Move(fD + oldFileName, fD + newFileName);
-                i++;
+                string newFileName = fP + i.ToString("D" + preceedingZeros.ToString("D")) + fE;
+                try
+                {
+                    File.Move(fD + oldFileName, fD + newFileName);
+                    i++;
+                }
+                catch (IOException e)
+                {
+                    //TODO: Figure out if anything NEEDS to be done;
+                }
+
 
             }
             return filesMatched.Count<String>();
@@ -43,20 +51,23 @@ namespace File_Renamer
             string fP = filePrefix.Text;
             bool dirExists = false;
             bool extValid = false;
-            bool userOK = false;
+            bool userOK = true;
 
             //Checking if directory exists
-            if ( !Directory.Exists(fD) || String.IsNullOrEmpty(fD) )
+            if (!Directory.Exists(fD) || String.IsNullOrEmpty(fD))
             {
                 verifyNoDirectory noDirProvided = new verifyNoDirectory();
                 noDirProvided.ShowDialog();
                 userOK = noDirProvided.oktoProceed;
-                messageDelivery.Text = "We entered this code Path";
                 if (userOK)
                 {
                     dirExists = true;
                     fD = Directory.GetCurrentDirectory();
                 }
+            }
+            else
+            {
+                dirExists = true;
             }
 
 
@@ -101,7 +112,7 @@ namespace File_Renamer
             fileExtension.Text = String.Empty;
             filePrefix.Text = String.Empty;
             messageDelivery.Text = String.Empty;
-            this.Size = new System.Drawing.Size(300, 300);
+            this.Size = new System.Drawing.Size(375, 300);
         }
 
         private void quit_Click(Object sender, EventArgs e)
@@ -113,6 +124,15 @@ namespace File_Renamer
         {
             aboutMenu about = new aboutMenu();
             about.Show();
+        }
+
+        private void browseButton_Click(Object sender, EventArgs e)
+        {
+            FolderBrowserDialog fdlg = new FolderBrowserDialog();
+            if (fdlg.ShowDialog() == DialogResult.OK)
+            {
+                fileDirectory.Text = fdlg.SelectedPath;
+            }
         }
     }
 }

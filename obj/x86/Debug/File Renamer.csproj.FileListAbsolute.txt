@@ -21,3 +21,4 @@ C:\Users\Roymond\Personal_Projects\C#\FileRenamer\obj\x86\Debug\File_Renamer.Pro
 C:\Users\Roymond\Personal_Projects\C#\FileRenamer\obj\x86\Debug\File Renamer.csproj.GenerateResource.Cache
 C:\Users\Roymond\Personal_Projects\C#\FileRenamer\obj\x86\Debug\File_Renamer.aboutMenu.resources
 C:\Users\Roymond\Personal_Projects\C#\FileRenamer\obj\x86\Debug\File_Renamer.verifyNoDirectory.resources
+C:\Users\Roymond\Personal_Projects\C#\FileRenamer\obj\x86\Debug\File Renamer.csprojResolveAssemblyReference.cache
