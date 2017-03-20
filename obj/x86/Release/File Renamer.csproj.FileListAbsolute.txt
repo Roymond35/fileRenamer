@@ -1,8 +1,0 @@
-C:\Users\Roymond\Personal_Projects\C#\FileRenamer\bin\Release\File Renamer.exe
-C:\Users\Roymond\Personal_Projects\C#\FileRenamer\bin\Release\File Renamer.pdb
-C:\Users\Roymond\Personal_Projects\C#\FileRenamer\obj\x86\Release\File_Renamer.aboutMenu.resources
-C:\Users\Roymond\Personal_Projects\C#\FileRenamer\obj\x86\Release\File_Renamer.mainPage.resources
-C:\Users\Roymond\Personal_Projects\C#\FileRenamer\obj\x86\Release\File_Renamer.Properties.Resources.resources
-C:\Users\Roymond\Personal_Projects\C#\FileRenamer\obj\x86\Release\File Renamer.csproj.GenerateResource.Cache
-C:\Users\Roymond\Personal_Projects\C#\FileRenamer\obj\x86\Release\File Renamer.exe
-C:\Users\Roymond\Personal_Projects\C#\FileRenamer\obj\x86\Release\File Renamer.pdb
